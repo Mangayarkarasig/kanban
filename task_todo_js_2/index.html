@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kanban</title>
+    <link rel="stylesheet" href="data.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="header_tag">
+                <h1>Project Example</h1>
+                
+                <button id="button">Add task</button>
+            </div>
+
+            <div class="main_box">
+                <div class="box_1">
+                    <div class="todo">
+                        <img src="./img_1.png" class="img"/>
+                        <h3>To Do</h3>
+                    </div>
+                    <div class="banners">
+                        <h5>Christmas Banners</h5>
+                        <div class="label">
+                            <img src="./Christmas_Banners.png" class="img_1"/>
+                            <button>Label</button>
+                        </div>
+                    </div>
+                    <div class="banners">
+                        <h5>Redo Portfolio</h5>
+                        <div class="label">
+                            <img src="./Christmas_Banners.png" class="img_1"/>
+                            <button>Label</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_2">
+                    <div class="todo">
+                        <img src="./img_2.png" class="img"/>
+                        <h3>In Progress</h3>
+                    </div>
+                    <div class="banners">
+                        <h5>Coffee Break</h5>
+                        <div class="always">
+                            <img src="./Female.png" class="img_1"/>
+                            <button>Always</button>
+                        </div>
+                    </div>
+                    <div class="banners">
+                        <h5>Updating Portfolio</h5>
+                        <div class="always">
+                            <img src="./Female.png" class="img_1"/>
+                            <button >Webflow</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_3">
+                    <div class="todo">
+                        <img src="./img_3.png" class="img"/>
+                        <h3>Review</h3>
+                    </div>
+                    <div class="banners">
+                        <h5>Release to Figma Community</h5>
+                        <div class="feedback">
+                            <img src="./Christmas_Banners.png" class="img_1"/>
+                            <button>Release</button>
+                        </div>
+                    </div>
+                    <div class="banners">
+                        <h5>User Feedback</h5>
+                        <div class="feedback">
+                            <img src="./Christmas_Banners.png" class="img_1"/>
+                            <button>Feedback</button>
+                        </div>
+                    </div>
+                    <div class="banners">
+                        <h5>Background images from <a href="humaaans.com">humaaans.com</a></h5>
+                        <div class="feedback">
+                            <img src="./Christmas_Banners.png" class="img_1"/>
+                            <button>Sourcing</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_4">
+                    <div class="todo">
+                        <img src="./img_4.png" class="img"/>
+                        <h3 id="completed">Done</h3>
+                    </div>
+                    <div class="banners">
+                        <h5>Style Guide</h5>
+                        <div class="done">
+                            <img src="./Female.png" class="img_1"/>
+                            <button>UI</button>
+                        </div>
+                    </div>
+                    <div class="banners">
+                        <h5>Component Library</h5>
+                        <div class="done">
+                            <img src="./Female.png" class="img_1"/>
+                            <button>UI</button>
+                        </div>
+                    </div>
+                    <div class="banners">
+                        <h5>Sticker Components    </h5>
+                        <div class="done">
+                            <img src="./Female.png" class="img_1"/>
+                            <button>UI</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popup_content">
+            <div class="popuphead">
+            <h1>Add TODO</h1>
+            <button id="close">X</button>
+            </div>
+            <div class="dataformgroup">
+                <input type="text" name="task" value="" placeholder="task" id="task"> 
+            </div>
+            <div class="dataformgroup">
+                <input type="text" name="description" value="" placeholder="description" id="description">
+            </div>
+            <div class="dataformgroup"> 
+                <input type="date" id="date" name="date"> 
+            </div>
+            <div class="formGroup">
+                <input type="radio" name="Status" checked id="low" />
+                <label for="low">Low</label>
+                <input type="radio" name="Status" id="medium" />
+                <label for="medium">Medium</label> 
+                <input type="radio" name="Status" checked id="high" />
+                <label for="high">High</label>
+            </div>
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js" ></script>
+</body>
+</html>
