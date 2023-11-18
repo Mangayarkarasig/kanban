@@ -198,15 +198,19 @@ display: flex;
 
 .box_1{
     flex-basis: 100%;
+    overflow: auto;
 }
 .box_2{
     flex-basis: 100%;
+    overflow: auto;
 }
 .box_3{
     flex-basis: 100%;
+    overflow: auto;
 }
 .box_4{
     flex-basis: 100%;
+    overflow: auto;
 }
 .container{
     height: auto;
