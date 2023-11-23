@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+.container{
+    background-color:#E1E8ED;
+    border: none;
+    height: 100vh;
+    
+}
+.box{
+    padding:20px;
+    
+}
+.header_tag{
+display: flex;
+}
+.header_tag h1{
+    font-style: Avenir Next;
+    font-weight: 700;
+    font-size: 38px;
+    margin: 10px;
+    color:#171717;
+    margin-bottom: 20px;
+}
+.header_tag button{
+    border-radius: 9px;
+    border: none;
+    background-color: #F6AFAF;
+    padding: 10px;
+    margin: 10px;
+    font-style: Avenir Next;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.box_1{
+    background-color:#59B4D1;
+    border-radius: 4px;
+    border: none;
+    flex-basis: 25%;
+    margin:5px;
+    align-self: flex-start;
+    margin-right: 10px;
+}
+.todo{
+    display: flex;
+}
+.main_box{
+    display: flex;
+    
+}
+.todo h3{
+    color:#FFFFFF;
+    font-style: Avenir Next;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px;
+    margin:10px;
+    margin-left: 0px;
+}
+.todo img{
+    margin:10px;
+    padding: 4px;
+
+}
+.banners{
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+    margin: 8px;
+    padding: 5px;
+    
+}
+.banners h5{
+    font-style: Avenir Next;
+    font-weight: 500;
+    font-size: 12px;
+    color: #171717;
+}
+.label{
+    display: flex;
+
+}
+.common_button{
+    margin: 10px;
+    margin-left: 0px;
+    padding:6px 12px 6px 12px;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #59B4D1;
+    font-style: Avenir Next;
+    font-weight: 700;
+    font-size: 10px;
+
+}
+.img_1{
+    margin: 5px;
+    padding:4px;
+}
+
+.box_2{
+    background-color:#D0935A;
+    border-radius: 4px;
+    border: none;
+    flex-basis: 25%;
+    margin:5px;
+    align-self: flex-start;
+    margin-right: 10px;
+}
+
+.always{
+    display: flex;
+
+}
+.always button{
+    margin: 10px;
+    margin-left: 0px;
+    padding:6px 12px 6px 12px;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #D0935A;
+    font-style: Avenir Next;
+    font-weight: 700;
+    font-size: 10px;
+}
+.box_3{
+    background-color:#945AD1;
+    border-radius: 4px;
+    border: none;
+    flex-basis: 25%;
+    margin:5px;
+    height: auto;
+    align-self: flex-start;
+    margin-right: 10px;
+}
+
+.feedback{
+    display: flex;
+
+}
+.feedback button{
+    margin: 10px;
+    margin-left: 0px;
+    padding:6px 12px 6px 12px;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #945AD1;
+    font-style: Avenir Next;
+    font-weight: 700;
+    font-size: 10px;
+
+}
+
+.box_4{
+    background-color:#59D090;
+    border-radius: 4px;
+    border: none;
+    flex-basis: 25%;
+    margin:5px;
+    height: auto;
+    align-self: flex-start;
+    margin-right: 10px;
+    
+}
+
+.done{
+    display: flex;
+
+}
+.done button{
+    margin: 10px;
+    margin-left: 0px;
+    padding:6px 12px 6px 12px;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #59D090;
+    font-style: Avenir Next;
+    font-weight: 700;
+    font-size: 10px;
+
+}
+#completed{
+    color:#171717;
+}
+
+@media only screen and (max-width: 700px) 
+    {
+.main_box{
+   display: block;
+}
+
+.box_1{
+    flex-basis: 100%;
+    overflow: auto;
+}
+.box_2{
+    flex-basis: 100%;
+    overflow: auto;
+}
+.box_3{
+    flex-basis: 100%;
+    overflow: auto;
+}
+.box_4{
+    flex-basis: 100%;
+    overflow: auto;
+}
+.container{
+    height: auto;
+}
+    }
+
+.popup{
+    background-color: rgb(0 0 0 / 43%);
+    position:absolute;
+    width:100%;
+    height:100vh;
+    top:0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup_content{
+    background-color:rgb(238, 145, 232);
+    padding: 20px;
+    border-radius: 5px;
+    position:relative;
+    width:50%;
+}
+.popuphead{
+    display: flex;
+    justify-content: space-between;
+}
+.popuphead h1{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.dataformgroup{
+    padding:2px;
+    margin-bottom: 5px;
+}
+.formGroup{
+    margin:2px;
+    margin-bottom: 10px;
+}
+.popup_content button{
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    background-color: rgb(39, 84, 233);
+    color: #000000;
+    margin-bottom: 10px;
+}
+.popuphead button{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 1px 8px 1px 8px;
+    background-color: red;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 3px;
+}
