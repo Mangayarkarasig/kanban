@@ -21,6 +21,7 @@ document.querySelector(".popup_button").addEventListener("click",function(){
         date: date.value,
         priority: priority.id,
         status: 'done'
+        
     }
     allTasks.push(data)
 
@@ -39,11 +40,17 @@ document.querySelector(".popup_button").addEventListener("click",function(){
 
 let todo = document.querySelector('.todoList')
 let done = document.querySelector('.doneList')
+let inprogress = document.querySelector('.inprogress')
+let Review = document.querySelector('.Review')
 
 function updateUI(){
     todo.innerHTML = ''
+    done.innerHTML = ''
+    inprogress.innerHTML = ''
+    Review.innerHTML = ''
+
     allTasks.forEach((task) =>{
-        let element =  `<div class="banners">
+        let element =  `<div class="banners" draggable="true" id=${task.id}>
                          <h5 class="common_heading">${task.title}</h5>
                          <p>${task.description}</p>
                         <div class="common_content">
@@ -53,12 +60,56 @@ function updateUI(){
 
                     if(task.status == 'done'){
                         todo.insertAdjacentHTML('beforeend', element)
+                       
                     }
-                    else {
+
+                    if(task.status == ''){
+                        inprogress.insertAdjacentHTML('beforeend', element)
+                    }
+
+                    if(task.status == ''){
+                        Review.insertAdjacentHTML('beforeend', element)
+                    }
+
+                    if(task.status == ''){
+                       
                         done.insertAdjacentHTML('beforeend', element)
                     }
-                    
+                   
                 })
             }
             
             updateUI()
+
+            let boxes = document.querySelectorAll('.box')
+            let dragabbleElement = null
+
+            boxes.forEach((box)=> {
+
+                box.addEventListener('dragstart', function(event){
+                    dragabbleElement = event.target
+                    event.target.style.opacity = '0.5'
+                })
+
+                box.addEventListener('dragover', function(event){
+                    event.preventDefault()
+                })
+                
+                box.addEventListener('drop', function(event){
+                    if(dragabbleElement){
+                        box.appendChild(dragabbleElement)
+                    }
+                })
+
+                box.addEventListener('dragend', function(event){
+                    event.target.style.opacity = '1'
+                    let id = event.target.id
+                    let status = box.classList[2]
+            
+                    let findIdx = allTasks.findIndex((item)=> item.id == id)
+                    allTasks[findIdx].status = status
+                    localStorage.setItem('task', JSON.stringify(allTasks))
+                })
+            
+               
+            })
